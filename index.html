@@ -1,0 +1,997 @@
+<!doctype html>
+<!--
+  BAMBOO CENTER OF DEVELOPMENT, jednostranični sajt "Rastemo zajedno"
+
+  Slike (originalni naziv iz paketa -> sekcija). Sve fotografije su isečene tako da
+  utisnuti logo i adresa ne ulaze u kadar.
+  1-logo-i-panda/logo-bamboo-krug-200px.png ............ header, footer
+  1-logo-i-panda/panda-*.jpg (4 stock crteža) ........... NISU korišćeni, samo referenca za poze; panda je nacrtana iznova (inline SVG)
+  2-hero/hero-devojcica-svila-osmeh.jpg ................ NIJE korišćena (klijent je tražio drugačiji hero)
+  2-hero/hero-senzorna-sala-panorama-1920x600.jpg ...... Hero, utišana zelena traka iza stabljike (duotone)
+  2-hero/hero-faze-razvoja-bebe-1920x600-stock.jpg ..... NIJE korišćena (stock)
+  3-usluge/logoped-decak-kartice-zivotinje.jpg ......... Usluge (Logoped), Prvi dolazak
+  3-usluge/defektolog-decak-perle.jpg .................. Usluge (Defektolog)
+  3-usluge/senzorna-decak-svetlece-ogledalo.jpg ........ Usluge (Senzorna integracija)
+  3-usluge/senzorna-devojcica-balans-disk.jpg .......... Prvi dolazak, Usluge (Senzorna integracija, druga slika)
+  3-usluge/neurofeedback-dete-ekran.jpg ................ Usluge (Neurofeedback)
+  3-usluge/neurofeedback-flajer.jpg .................... NIJE korišćen
+  3-usluge/forbrain-logoped-sa-detetom.png ............. Usluge (Forbrain), isečeno iz okvira
+  3-usluge/forbrain-slusalice-proizvod.png ............. Usluge (Forbrain, mala slika)
+  3-usluge/soundsory-devojcica-ruke-gore.jpg ........... Usluge (Soundsory), isečeno iz cvetnog okvira
+  3-usluge/soundsory-slusalice-kutija.jpg .............. Usluge (Soundsory, mala slika)
+  4-tim/svetlana-bozovic-osnivac.png ................... Tim
+  4-tim/sara-milenkovic-defektolog.jpg ................. Tim
+  4-tim/miljana-pavicevic-psiholog.png ................. Tim
+  4-tim/ana-ivkovic-vaspitac.png ....................... Tim
+  4-tim/tim-grupna-6-osoba.png ......................... Tim (grupna); neimenovane osobe nisu potpisane
+  4-tim/svetlana-kod-diploma-proveriti.jpg ............. NIJE korišćena dok Svetlana ne potvrdi
+  5-prostor/sala-senzorna-integracija.jpg .............. Zašto baš Bamboo
+  5-prostor/sala-motorika-zid-za-penjanje.jpg .......... Zašto baš Bamboo
+  5-prostor/senzorna-soba-plava.jpg .................... Zašto baš Bamboo
+  5-prostor/senzorna-soba-zelena.jpg, deca-za-stolom-igra.jpg ... NISU korišćene
+  6-ostalo/edukacije-kolaz.jpg ......................... Usluge (Edukacije), gornji i donji red kolaža bez logoa
+  6-ostalo/nagrada-100-zena-privredna-komora.jpg ....... Svetlanina priča
+  6-ostalo/nagrada-100-zena-urucenje.jpg ............... Svetlanina priča
+  6-ostalo/mediji-glas-sumadije.jpg .................... NIJE korišćena (skraćena priča osnivačice)
+  6-ostalo/svetlana-drzi-igru-luka-i-mia.jpg ........... Luka i Mia
+  6-ostalo/igra-luka-i-mia.jpg ......................... Luka i Mia
+  6-ostalo/radionica-sidro-dvoriste-mural-panda.jpg .... Luka i Mia (Sidro, mala slika)
+  6-ostalo/partner-logoland.jpg, partner-kvarklab.jpg .. Footer (partneri)
+  6-ostalo/preporuka-*.jpg ............................. NISU korišćene (samo izvor teksta)
+
+  Pokret: GSAP + ScrollTrigger + Lenis (učitani iz priloga u <head>).
+  prefers-reduced-motion: stabljika je odmah izrasla, nema penjanja ni treperenja kursora.
+-->
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bamboo Center of Development, centar za rani razvoj, Kragujevac</title>
+<meta name="description" content="Rana dijagnostika i rehabilitacija dece u Kragujevcu: timska procena logopeda i defektologa, senzorna integracija, neurofeedback, Forbrain i Soundsory. Mokranjčeva 58, 066 661 6699.">
+<meta property="og:site_name" content="Bamboo Center of Development">
+<meta property="og:title" content="Bamboo centar, centar za rani razvoj u Kragujevcu">
+<meta property="og:description" content="Svako dete raste svojim tempom. Mi smo tu da ga podržimo.">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2E4529">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..800;1,400..800&amp;family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Bamboo Center of Development","alternateName":"Bamboo centar","description":"Centar za rani razvoj i podršku deci i roditeljima u Kragujevcu.","telephone":"+381666616699","email":"bamboobcd@gmail.com","foundingDate":"2021-05-31","address":{"@type":"PostalAddress","streetAddress":"Mokranjčeva 58","postalCode":"34000","addressLocality":"Kragujevac","addressCountry":"RS"},"sameAs":["https://www.instagram.com/bamboo_bcd/","https://www.facebook.com/people/Bamboo-Center-of-Development/100077275067217/","https://www.youtube.com/@bamboocenterofdevelopment716"]}
+</script>
+</head>
+<body>
+<div id="bcd-root" class="bcd" style="--accent: #B5603A">
+
+  <!-- leaf cursor -->
+  <div class="cursor" aria-hidden="true"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M4 4c10 0 22 4 24 14 1 6-4 10-10 10C8 28 4 16 4 4z"></path><path d="M6 6c6 6 12 12 20 20" stroke="#F5EFE3" stroke-width="1.6" fill="none" stroke-linecap="round"></path></svg></div>
+
+  <!-- global stalk + panda -->
+  <div class="spine" aria-hidden="true">
+    <div class="spine-stalk"></div>
+    <svg class="spine-leaf" data-spine-at="14" style="bottom: 14vh" viewBox="0 0 46 20"><path d="M0 10C10 0 34 0 46 10 34 20 10 20 0 10z" fill="#8DAA57"></path></svg>
+    <svg class="spine-leaf l" data-spine-at="30" style="bottom: 30vh" viewBox="0 0 46 20"><path d="M0 10C10 0 34 0 46 10 34 20 10 20 0 10z" fill="#A9C07C"></path></svg>
+    <svg class="spine-leaf" data-spine-at="48" style="bottom: 48vh" viewBox="0 0 46 20"><path d="M0 10C10 0 34 0 46 10 34 20 10 20 0 10z" fill="#6F8F3F"></path></svg>
+    <svg class="spine-leaf l" data-spine-at="66" style="bottom: 66vh" viewBox="0 0 46 20"><path d="M0 10C10 0 34 0 46 10 34 20 10 20 0 10z" fill="#8DAA57"></path></svg>
+    <svg class="spine-leaf" data-spine-at="84" style="bottom: 84vh" viewBox="0 0 46 20"><path d="M0 10C10 0 34 0 46 10 34 20 10 20 0 10z" fill="#A9C07C"></path></svg>
+    <svg class="spine-panda" data-pose="climb" viewBox="0 0 140 170">
+      <ellipse cx="86" cy="146" rx="15" ry="12" fill="#2C342A"></ellipse>
+      <ellipse cx="68" cy="112" rx="32" ry="35" fill="#FBF8F1"></ellipse>
+      <path d="M38 98c6-14 52-14 60 0l-4 11c-12-8-40-8-52 0z" fill="#2C342A"></path>
+      <ellipse cx="50" cy="148" rx="15" ry="12" fill="#2C342A"></ellipse>
+      <path class="arm-grip" d="M94 104c-6-10-14-16-24-18" stroke="#2C342A" stroke-width="15" stroke-linecap="round" fill="none"></path>
+      <path class="arm-wave" d="M92 100c8-10 12-22 10-36" stroke="#2C342A" stroke-width="15" stroke-linecap="round" fill="none"></path>
+      <circle cx="40" cy="30" r="13" fill="#2C342A"></circle><circle cx="96" cy="30" r="13" fill="#2C342A"></circle>
+      <circle cx="40" cy="30" r="6" fill="#4A5446"></circle><circle cx="96" cy="30" r="6" fill="#4A5446"></circle>
+      <ellipse cx="68" cy="56" rx="38" ry="33" fill="#FBF8F1"></ellipse>
+      <path d="M34 66c8 16 60 16 68 0-6 20-62 20-68 0z" fill="#EDE5D4"></path>
+      <ellipse cx="53" cy="58" rx="10" ry="13" transform="rotate(22 53 58)" fill="#2C342A"></ellipse>
+      <ellipse cx="83" cy="58" rx="10" ry="13" transform="rotate(-22 83 58)" fill="#2C342A"></ellipse>
+      <circle cx="55" cy="57" r="3.6" fill="#FBF8F1"></circle><circle cx="81" cy="57" r="3.6" fill="#FBF8F1"></circle>
+      <circle cx="55.6" cy="57.4" r="2.2" fill="#2C342A"></circle><circle cx="80.4" cy="57.4" r="2.2" fill="#2C342A"></circle>
+      <path d="M63 68q5-3 10 0q-2 5-5 5t-5-5z" fill="#2C342A"></path>
+      <path d="M68 73q0 5-5 6M68 73q0 5 5 6" stroke="#2C342A" stroke-width="1.8" fill="none" stroke-linecap="round"></path>
+      <circle cx="44" cy="72" r="5" fill="#D98E6E" opacity=".4"></circle><circle cx="92" cy="72" r="5" fill="#D98E6E" opacity=".4"></circle>
+      <path d="M98 22c10-10 26-10 34-4-8 8-24 10-34 4z" fill="#8DAA57"></path>
+      <path d="M38 102c8 12 22 14 34 4" stroke="#2C342A" stroke-width="15" stroke-linecap="round" fill="none"></path>
+    </svg>
+  </div>
+
+  <!-- HEADER -->
+  <header class="hdr">
+    <div class="wrap hdr-in">
+      <a class="hdr-logo" href="#pocetna" aria-label="Bamboo Center of Development, početak strane">
+        <img src="assets/img/logo.png" alt="" width="52" height="52">
+        <span>Bamboo centar<small>Kragujevac</small></span>
+      </a>
+      <nav class="nav" aria-label="Glavna navigacija">
+        <a href="#pocetna">Početna</a>
+        <a href="#usluge">Usluge</a>
+        <a href="#prvi-dolazak">Prvi dolazak</a>
+        <a href="#tim">Tim</a>
+        <a href="#price">Priče roditelja</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="hdr-phone" href="tel:+381666616699">066 661 6699</a>
+      <a class="btn hdr-cta" href="#kontakt">Zakažite prvu procenu</a>
+      <button class="menu-btn" type="button" aria-label="Otvorite meni" aria-expanded="false" aria-controls="mobilni-meni" data-act="menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"></path></svg>
+      </button>
+    </div>
+    
+      <nav class="wrap mnav" id="mobilni-meni" aria-label="Mobilna navigacija" hidden>
+        <a href="#usluge" data-act="close-menu">Usluge</a>
+        <a href="#prvi-dolazak" data-act="close-menu">Prvi dolazak</a>
+        <a href="#tim" data-act="close-menu">Tim</a>
+        <a href="#price" data-act="close-menu">Priče roditelja</a>
+        <a href="#kontakt" data-act="close-menu">Kontakt</a>
+        <a class="btn" href="#kontakt" data-act="close-menu" style="margin-top: 14px; justify-content: center; font-family: 'Alegreya Sans', sans-serif; font-size: 17px; border: 0">Zakažite prvu procenu</a>
+        <a href="tel:+381666616699" style="font-size: 17px; font-family: 'Alegreya Sans', sans-serif; border: 0">066 661 6699</a>
+      </nav>
+    
+  </header>
+
+  <main>
+  <!-- HERO -->
+  <section id="pocetna" class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow hl hero-eyebrow" style="animation-delay: .05s"><svg width="18" height="18" viewBox="0 0 32 32" fill="#6F8F3F" aria-hidden="true"><path d="M4 4c10 0 22 4 24 14 1 6-4 10-10 10C8 28 4 16 4 4z"></path></svg>Centar za rani razvoj · Kragujevac</span>
+        <h1 class="hl hl1">Svako dete raste svojim tempom.</h1>
+        <p class="hl hl4">Mi smo tu da ga podržimo.</p>
+        <div class="hero-cta">
+          <a class="btn btn-lg" href="#kontakt">Zakažite prvu procenu
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a class="tlink" href="tel:+381666616699">066 661 6699</a>
+        </div>
+        <ul class="hero-meta">
+          <li>Od 2021. u Kragujevcu</li>
+          <li>Timska procena logopeda i defektologa</li>
+          <li>Ugovor sa SOVO fondom</li>
+        </ul>
+      </div>
+
+      <div class="garden" data-hero-garden="" aria-hidden="true">
+        <div class="g-band"><img src="assets/img/hero-sala-duotone.jpg" alt="" loading="eager"></div>
+        <div class="g-stalks" data-hero-grow="">
+          <svg viewBox="0 0 240 640" preserveAspectRatio="xMidYMax meet">
+            <g class="grow">
+              <rect x="104" y="40" width="22" height="600" rx="11" fill="#6F8F3F"></rect>
+              <rect x="102" y="150" width="26" height="6" rx="3" fill="#4F6B2A"></rect>
+              <rect x="102" y="300" width="26" height="6" rx="3" fill="#4F6B2A"></rect>
+              <rect x="102" y="450" width="26" height="6" rx="3" fill="#4F6B2A"></rect>
+            </g>
+            <g class="grow b">
+              <rect x="40" y="200" width="16" height="440" rx="8" fill="#8DAA57"></rect>
+              <rect x="38" y="330" width="20" height="5" rx="2.5" fill="#6F8F3F"></rect>
+              <rect x="38" y="480" width="20" height="5" rx="2.5" fill="#6F8F3F"></rect>
+            </g>
+            <g class="grow c">
+              <rect x="176" y="300" width="14" height="340" rx="7" fill="#A9C07C"></rect>
+              <rect x="174" y="440" width="18" height="5" rx="2.5" fill="#8DAA57"></rect>
+            </g>
+            <path class="pop" style="animation-delay: 1.5s" d="M126 152c26-24 64-26 90-14-24 18-60 24-90 14z" fill="#8DAA57"></path>
+            <path class="pop r" style="animation-delay: 1.8s" d="M104 300c-24-20-60-22-86-8 22 16 58 20 86 8z" fill="#A9C07C"></path>
+            <path class="pop" style="animation-delay: 2.1s" d="M126 300c22-30 58-40 88-34-20 22-56 36-88 34z" fill="#6F8F3F"></path>
+            <path class="pop r" style="animation-delay: 1.3s" d="M104 46c-18-26-50-36-80-30 18 22 50 34 80 30z" fill="#6F8F3F"></path>
+            <path class="pop" style="animation-delay: 1.1s" d="M126 46c14-30 44-44 74-42-14 26-44 42-74 42z" fill="#8DAA57"></path>
+            <path class="pop r" style="animation-delay: 2.3s" d="M40 330c-14-18-36-22-40-20 6 14 22 22 40 20z" fill="#8DAA57"></path>
+          </svg>
+        </div>
+        <div class="g-climb" data-hero-climb="">
+          <svg class="g-panda" viewBox="0 0 140 170">
+            <ellipse cx="86" cy="146" rx="15" ry="12" fill="#2C342A"></ellipse>
+            <ellipse cx="68" cy="112" rx="32" ry="35" fill="#FBF8F1"></ellipse>
+            <path d="M38 98c6-14 52-14 60 0l-4 11c-12-8-40-8-52 0z" fill="#2C342A"></path>
+            <ellipse cx="50" cy="148" rx="15" ry="12" fill="#2C342A"></ellipse>
+            <path d="M94 104c-6-10-14-16-24-18" stroke="#2C342A" stroke-width="15" stroke-linecap="round" fill="none"></path>
+            <circle cx="40" cy="30" r="13" fill="#2C342A"></circle><circle cx="96" cy="30" r="13" fill="#2C342A"></circle>
+            <circle cx="40" cy="30" r="6" fill="#4A5446"></circle><circle cx="96" cy="30" r="6" fill="#4A5446"></circle>
+            <ellipse cx="68" cy="56" rx="38" ry="33" fill="#FBF8F1"></ellipse>
+            <path d="M34 66c8 16 60 16 68 0-6 20-62 20-68 0z" fill="#EDE5D4"></path>
+            <ellipse cx="53" cy="58" rx="10" ry="13" transform="rotate(22 53 58)" fill="#2C342A"></ellipse>
+            <ellipse cx="83" cy="58" rx="10" ry="13" transform="rotate(-22 83 58)" fill="#2C342A"></ellipse>
+            <circle cx="55" cy="57" r="3.6" fill="#FBF8F1"></circle><circle cx="81" cy="57" r="3.6" fill="#FBF8F1"></circle>
+            <circle cx="55.6" cy="57.4" r="2.2" fill="#2C342A"></circle><circle cx="80.4" cy="57.4" r="2.2" fill="#2C342A"></circle>
+            <path d="M63 68q5-3 10 0q-2 5-5 5t-5-5z" fill="#2C342A"></path>
+            <path d="M68 73q0 5-5 6M68 73q0 5 5 6" stroke="#2C342A" stroke-width="1.8" fill="none" stroke-linecap="round"></path>
+            <circle cx="44" cy="72" r="5" fill="#D98E6E" opacity=".4"></circle><circle cx="92" cy="72" r="5" fill="#D98E6E" opacity=".4"></circle>
+            <path d="M98 22c10-10 26-10 34-4-8 8-24 10-34 4z" fill="#8DAA57"></path>
+            <path d="M38 102c8 12 22 14 34 4" stroke="#2C342A" stroke-width="15" stroke-linecap="round" fill="none"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ISPOD ZEMLJE -->
+  <div class="soil">
+    <svg class="soil-edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 0H1440V44c-90 14-180 0-360-4s-360-26-540-6-360 8-540 2S0 44 0 44z" fill="#F5EFE3"></path>
+      <path d="M1440 44c-90 14-180 0-360-4s-360-26-540-6-360 8-540 2" stroke="#8A7A5E" stroke-width="2" fill="none" stroke-dasharray="2 9" stroke-linecap="round"></path>
+    </svg>
+    <svg class="soil-roots" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M300 40c8 40-10 70 6 110s-6 70 4 110M330 60c-14 30 10 60-4 90M1120 40c-10 46 12 80-2 120s8 60-2 100M1090 70c14 26-8 52 6 80" stroke="#D3C3A3" stroke-width="2" fill="none" stroke-linecap="round"></path>
+      <circle cx="180" cy="120" r="4" fill="#D3C3A3"></circle><circle cx="230" cy="210" r="3" fill="#D3C3A3"></circle><circle cx="1250" cy="150" r="4" fill="#D3C3A3"></circle><circle cx="1210" cy="240" r="3" fill="#D3C3A3"></circle><circle cx="620" cy="250" r="3" fill="#D3C3A3"></circle><circle cx="860" cy="90" r="3" fill="#D3C3A3"></circle>
+    </svg>
+    <div class="wrap soil-in">
+      <p class="soil-a" data-reveal="">Neke stvari ostaju ispod zemlje duže nego što roditelj može da izdrži.</p>
+      <svg class="sprout" data-reveal="" viewBox="0 0 60 90" aria-hidden="true"><path d="M30 90V34" stroke="#6F8F3F" stroke-width="4" stroke-linecap="round"></path><path d="M30 46C30 28 16 18 2 18c0 16 12 28 28 28z" fill="#8DAA57"></path><path d="M30 36C30 16 44 4 58 4c0 18-12 32-28 32z" fill="#6F8F3F"></path></svg>
+      <p class="soil-b" data-reveal="">Zatim se pojavi prva reč, prvi korak, mirniji dan.</p>
+    </div>
+    <svg class="soil-bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V30c200-24 420 10 720-6s520-20 720 4V60z" fill="#F5EFE3"></path></svg>
+  </div>
+
+
+  <!-- KOME POMAZEMO -->
+  <section id="kome" class="sec cx-dark" aria-labelledby="kome-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Kome pomažemo</span>
+        <h2 id="kome-h" class="h2">Prepoznajete li neku od <em>ovih briga?</em></h2>
+        <p class="lead">Radimo sa decom sa različitim razvojnim poremećajima, ali i sa decom tipičnog razvoja koja imaju teškoće sa pažnjom, koncentracijom, čitanjem ili pisanjem.</p>
+      </div>
+      <div class="cx">
+        <div class="cx-list" role="list">
+          
+            <div class="cx-row is-on" role="listitem" data-cx-row="0">
+              <button class="cx-head" type="button" data-act="cx" data-i="0" aria-pressed="true">
+                <span class="cx-n">01</span>
+                <span class="cx-t">Govor kasni ili je teško razumljiv</span>
+                <svg class="cx-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </button>
+              <div class="cx-mobile">
+                <p>Dete govori manje od vršnjaka, teško izgovara glasove ili se teško sporazumeva.</p>
+                <div class="c-links"><button class="c-link" type="button" data-go="logoped">Logoped</button><button class="c-link" type="button" data-go="forbrain">Forbrain</button></div>
+              </div>
+            </div>
+          
+            <div class="cx-row" role="listitem" data-cx-row="1">
+              <button class="cx-head" type="button" data-act="cx" data-i="1" aria-pressed="false">
+                <span class="cx-n">02</span>
+                <span class="cx-t">Teško održava pažnju</span>
+                <svg class="cx-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </button>
+              <div class="cx-mobile">
+                <p>Brzo odustaje, nemirno je, teško prati zadatke u vrtiću ili školi.</p>
+                <div class="c-links"><button class="c-link" type="button" data-go="neuro">Neurofeedback</button><button class="c-link" type="button" data-go="defektolog">Defektolog</button></div>
+              </div>
+            </div>
+          
+            <div class="cx-row" role="listitem" data-cx-row="2">
+              <button class="cx-head" type="button" data-act="cx" data-i="2" aria-pressed="false">
+                <span class="cx-n">03</span>
+                <span class="cx-t">Čitanje i pisanje idu teško</span>
+                <svg class="cx-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </button>
+              <div class="cx-mobile">
+                <p>Dete je tipičnog razvoja, ali su čitanje, pisanje ili koncentracija u školi pravi napor.</p>
+                <div class="c-links"><button class="c-link" type="button" data-go="timska">Timska procena</button><button class="c-link" type="button" data-go="defektolog">Defektolog</button></div>
+              </div>
+            </div>
+          
+            <div class="cx-row" role="listitem" data-cx-row="3">
+              <button class="cx-head" type="button" data-act="cx" data-i="3" aria-pressed="false">
+                <span class="cx-n">04</span>
+                <span class="cx-t">Zvuci, dodiri i gužva su mu previše</span>
+                <svg class="cx-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </button>
+              <div class="cx-mobile">
+                <p>Burno reaguje na buku, odeću, dodir ili gužvu i teško se smiruje.</p>
+                <div class="c-links"><button class="c-link" type="button" data-go="si">Senzorna integracija</button><button class="c-link" type="button" data-go="soundsory">Soundsory</button></div>
+              </div>
+            </div>
+          
+            <div class="cx-row" role="listitem" data-cx-row="4">
+              <button class="cx-head" type="button" data-act="cx" data-i="4" aria-pressed="false">
+                <span class="cx-n">05</span>
+                <span class="cx-t">Pokret i koordinacija zaostaju</span>
+                <svg class="cx-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </button>
+              <div class="cx-mobile">
+                <p>Spretnost, ravnoteža ili koordinacija nisu u skladu sa uzrastom.</p>
+                <div class="c-links"><button class="c-link" type="button" data-go="defektolog">Defektolog</button><button class="c-link" type="button" data-go="si">Senzorna integracija</button></div>
+              </div>
+            </div>
+          
+            <div class="cx-row" role="listitem" data-cx-row="5">
+              <button class="cx-head" type="button" data-act="cx" data-i="5" aria-pressed="false">
+                <span class="cx-n">06</span>
+                <span class="cx-t">Sumnjate na razvojni poremećaj</span>
+                <svg class="cx-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </button>
+              <div class="cx-mobile">
+                <p>Primećujete da se dete razvija drugačije i želite stručno mišljenje i plan.</p>
+                <div class="c-links"><button class="c-link" type="button" data-go="timska">Timska procena</button></div>
+              </div>
+            </div>
+          
+        </div>
+        <aside class="cx-panel" aria-live="polite">
+          <div class="cx-media">
+              <div class="cx-stage" aria-hidden="true"></div>
+              <svg class="cx-ill is-on" viewBox="0 0 200 200" aria-hidden="true"><path d="M40 60h90a20 20 0 0 1 20 20v40a20 20 0 0 1-20 20H90l-26 22v-22H40a20 20 0 0 1-20-20V80a20 20 0 0 1 20-20z"></path><path d="M162 82c8 10 8 26 0 36M174 70c14 18 14 42 0 60"></path><path class="dot" d="M58 100h.1M85 100h.1M112 100h.1"></path></svg>
+              <svg class="cx-ill" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="94" r="62"></circle><circle cx="100" cy="94" r="40"></circle><circle cx="100" cy="94" r="16"></circle><path class="dot" d="M100 94h.1"></path><path d="M24 178c20-14 30 10 50-4s30-16 50 0 30 10 54-4"></path></svg>
+              <svg class="cx-ill" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 62c-20-12-50-14-70-8v96c20-6 50-4 70 8 20-12 50-14 70-8V54c-20-6-50-4-70 8z"></path><path d="M100 62v96M46 78c14-2 28 0 40 6M46 100c14-2 28 0 40 6M114 84c12-6 26-8 40-6"></path><path d="M150 36l20-20 12 12-20 20zM150 36l-6 18 18-6"></path></svg>
+              <svg class="cx-ill" viewBox="0 0 200 200" aria-hidden="true"><path d="M112 46c-30 0-50 22-50 50 0 18 8 26 16 34 8 8 6 26 24 26 14 0 20-10 20-20 0-12 10-14 16-24 6-10 10-18 10-30 0-20-16-36-36-36z"></path><path d="M102 82c0-10 8-16 16-16s16 8 16 16c0 12-12 14-12 26"></path><path d="M44 70c-10 18-10 42 0 60M26 56c-16 28-16 60 0 88"></path></svg>
+              <svg class="cx-ill" viewBox="0 0 200 200" aria-hidden="true"><path d="M72 150c-12 0-18-14-16-30s10-28 20-28 14 14 12 30-4 28-16 28z"></path><path d="M124 118c-12 0-18-14-16-30s10-28 20-28 14 14 12 30-4 28-16 28z"></path><path class="dot" d="M62 82h.1M74 78h.1M86 82h.1M114 50h.1M126 46h.1M138 50h.1"></path><path d="M24 182c44-22 108-22 152 0"></path></svg>
+              <svg class="cx-ill" viewBox="0 0 200 200" aria-hidden="true"><circle cx="88" cy="88" r="48"></circle><path d="M122 122l44 44"></path><path d="M88 114V86M62 114h52"></path><path d="M88 94c0-12-10-18-20-18 0 12 8 18 20 18zM88 86c0-14 12-22 24-22 0 14-10 22-24 22z"></path></svg>
+            <div class="cx-cap">
+              <span class="cx-capn" id="cx-num">01 / 06</span>
+              <p class="cx-desc" id="cx-desc">Dete govori manje od vršnjaka, teško izgovara glasove ili se teško sporazumeva.</p>
+              <div class="c-links" id="cx-links"><button class="c-link" type="button" data-go="logoped">Logoped <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button class="c-link" type="button" data-go="forbrain">Forbrain <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <p class="c-note" data-reveal="">Ovo nisu dijagnoze, već česti razlozi zbog kojih nam se roditelji javljaju. Ako niste sigurni, prvi korak je timska procena.</p>
+    </div>
+  </section>
+
+  <!-- USLUGE -->
+  <section id="usluge" class="sec" aria-labelledby="usluge-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Usluge</span>
+        <h2 id="usluge-h" class="h2">Svaki list je jedan put podrške.</h2>
+        <p class="lead">Ako niste sigurni šta je Vašem detetu potrebno, počnite od timske procene. Otvorite list da vidite kako izgleda rad.</p>
+      </div>
+      <div class="leafbed">
+        <div class="leafbed-stalk" data-stalk="" aria-hidden="true"></div>
+        
+          <div class="leafrow leafrow-r" data-leafrow="">
+            <svg class="stem" viewBox="0 0 64 30" aria-hidden="true"><path d="M0 26C20 26 40 18 64 4" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"></path></svg>
+            <div class="leaf tone-1" id="list-timska">
+              <button class="leaf-btn" type="button" data-act="leaf" data-id="timska" aria-expanded="false" aria-controls="detalj-timska">
+                <span class="leaf-n">01</span>
+                <span class="leaf-t">Timska procena</span>
+                <span class="leaf-s">Logoped i defektolog zajedno upoznaju Vaše dete i daju Vam jasan plan.</span>
+                <span class="leaf-more">Saznajte više <svg class="leaf-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </button>
+              
+                <div class="leaf-detail" id="detalj-timska" hidden>
+                  
+                  
+                  
+                  
+                  <div class="leaf-body">
+                    <p>Zajednička procena logopeda i defektologa, bez žurbe, uz dete i roditelje.</p><p>Posle procene dobijate pisano mišljenje stručnog tima, preporuke i plan daljeg rada, kao i smernice šta možete raditi kod kuće.</p>
+                  </div>
+                  
+                  
+                  <a class="btn" href="#kontakt" style="align-self: flex-start">Zakažite procenu</a>
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="leafrow leafrow-l" data-leafrow="">
+            <svg class="stem" viewBox="0 0 64 30" aria-hidden="true"><path d="M0 26C20 26 40 18 64 4" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"></path></svg>
+            <div class="leaf tone-2" id="list-logoped">
+              <button class="leaf-btn" type="button" data-act="leaf" data-id="logoped" aria-expanded="false" aria-controls="detalj-logoped">
+                <span class="leaf-n">02</span>
+                <span class="leaf-t">Logoped</span>
+                <span class="leaf-s">Govor, jezik i komunikacija, kroz igru koja detetu prija.</span>
+                <span class="leaf-more">Saznajte više <svg class="leaf-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </button>
+              
+                <div class="leaf-detail" id="detalj-logoped" hidden>
+                  
+                    <img class="leaf-img" src="assets/img/logoped-kartice.jpg" alt="Dečak radi sa karticama i figuricama životinja" loading="lazy">
+                  
+                  
+                  
+                  
+                  <div class="leaf-body">
+                    <p>Dijagnostika i terapija jezika i govora: igra, artikulacija, slušna percepcija, razumevanje i komunikacija.</p>
+                  </div>
+                  
+                  
+                  <a class="btn" href="#kontakt" style="align-self: flex-start">Zakažite procenu</a>
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="leafrow leafrow-r" data-leafrow="">
+            <svg class="stem" viewBox="0 0 64 30" aria-hidden="true"><path d="M0 26C20 26 40 18 64 4" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"></path></svg>
+            <div class="leaf tone-3" id="list-defektolog">
+              <button class="leaf-btn" type="button" data-act="leaf" data-id="defektolog" aria-expanded="false" aria-controls="detalj-defektolog">
+                <span class="leaf-n">03</span>
+                <span class="leaf-t">Defektolog</span>
+                <span class="leaf-s">Individualna podrška kognitivnom, motoričkom, socijalnom i adaptivnom razvoju.</span>
+                <span class="leaf-more">Saznajte više <svg class="leaf-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </button>
+              
+                <div class="leaf-detail" id="detalj-defektolog" hidden>
+                  
+                    <img class="leaf-img" src="assets/img/defektolog-perle.jpg" alt="Dečak radi sa lavirintom od perli" loading="lazy">
+                  
+                  
+                  
+                  
+                  <div class="leaf-body">
+                    <p>Individualan rad kroz igru, senzorne aktivnosti, vizuelnu podršku, socijalne veštine i motoričku koordinaciju.</p><p>Koristimo reedukaciju psihomotorike, Brain Gym i rad sa primitivnim refleksima.</p>
+                  </div>
+                  
+                  
+                  <a class="btn" href="#kontakt" style="align-self: flex-start">Zakažite procenu</a>
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="leafrow leafrow-l" data-leafrow="">
+            <svg class="stem" viewBox="0 0 64 30" aria-hidden="true"><path d="M0 26C20 26 40 18 64 4" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"></path></svg>
+            <div class="leaf tone-4" id="list-si">
+              <button class="leaf-btn" type="button" data-act="leaf" data-id="si" aria-expanded="false" aria-controls="detalj-si">
+                <span class="leaf-n">04</span>
+                <span class="leaf-t">Senzorna integracija</span>
+                <span class="leaf-s">Za dete kome su svakodnevni čulni utisci previše ili ih teško organizuje.</span>
+                <span class="leaf-more">Saznajte više <svg class="leaf-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </button>
+              
+                <div class="leaf-detail" id="detalj-si" hidden>
+                  
+                    <img class="leaf-img" src="assets/img/senzorna-ogledalo.jpg" alt="Dečak ispred svetleće table u senzornoj sobi" loading="lazy">
+                  
+                  
+                  
+                  
+                  <div class="leaf-body">
+                    <p>Terapija koja pomaže deci čiji čulni sistem svakodnevne utiske doživljava kao previše ili ih teško organizuje.</p><p>Radimo u senzornoj sobi i u sali za motoriku i senzornu integraciju: švedske lestve, žuta svila, bazen sa lopticama, zid za penjanje i trambolina.</p>
+                  </div>
+                  
+                    <img class="panel-img2" src="assets/img/senzorna-balans.jpg" alt="Devojčica na balans disku" loading="lazy">
+                  
+                  
+                  <a class="btn" href="#kontakt" style="align-self: flex-start">Zakažite procenu</a>
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="leafrow leafrow-r" data-leafrow="">
+            <svg class="stem" viewBox="0 0 64 30" aria-hidden="true"><path d="M0 26C20 26 40 18 64 4" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"></path></svg>
+            <div class="leaf tone-5" id="list-neuro">
+              <button class="leaf-btn" type="button" data-act="leaf" data-id="neuro" aria-expanded="false" aria-controls="detalj-neuro">
+                <span class="leaf-n">05</span>
+                <span class="leaf-t">Neurofeedback</span>
+                <span class="leaf-s">Mozak uči kroz povratnu informaciju. Jednostavno, bezbolno i neinvazivno.</span>
+                <span class="leaf-more">Saznajte više <svg class="leaf-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </button>
+              
+                <div class="leaf-detail" id="detalj-neuro" hidden>
+                  
+                    <img class="leaf-img" src="assets/img/neurofeedback.jpg" alt="Dete tokom neurofeedback tretmana ispred ekrana" loading="lazy">
+                  
+                  
+                    <div class="viz" aria-hidden="true">
+                      <svg class="eeg" viewBox="0 0 800 84" preserveAspectRatio="none"><path d="M0 42 C20 20 30 64 50 42 S80 18 100 42 S130 70 150 42 S170 26 190 42 S230 60 250 42 S280 14 300 42 S330 66 350 42 S380 30 400 42 C420 20 430 64 450 42 S480 18 500 42 S530 70 550 42 S570 26 590 42 S630 60 650 42 S680 14 700 42 S730 66 750 42 S780 30 800 42" stroke="#6F8F3F" stroke-width="2.5" fill="none"></path><path d="M0 50 C30 44 50 58 80 50 S130 40 160 50 S220 60 260 50 S320 40 360 50 S390 56 400 50 C430 44 450 58 480 50 S530 40 560 50 S620 60 660 50 S720 40 760 50 S790 56 800 50" stroke="#B5603A" stroke-width="1.6" fill="none" opacity=".6"></path></svg>
+                      <span class="viz-note">ukrasni prikaz</span>
+                    </div>
+                  
+                  
+                  
+                  <div class="leaf-body">
+                    <p>Metoda zasnovana na praćenju električne aktivnosti mozga (EEG) i davanju povratne informacije, kako bi mozak učio korisnije obrasce.</p><p>Primenjuje se kod teškoća pažnje i hiperaktivnosti (ADHD), raspoloženja, sna, anksioznosti i stresa, koncentracije, teškoća u učenju, glavobolje i migrene.</p><p>Dete oko 30 minuta sedi ispred ekrana. Jedan ciklus čini 20 tretmana, najmanje dva puta nedeljno tokom 10 nedelja, uz pauzu između ciklusa.</p>
+                  </div>
+                  
+                  
+                  <a class="btn" href="#kontakt" style="align-self: flex-start">Zakažite procenu</a>
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="leafrow leafrow-l" data-leafrow="">
+            <svg class="stem" viewBox="0 0 64 30" aria-hidden="true"><path d="M0 26C20 26 40 18 64 4" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"></path></svg>
+            <div class="leaf tone-6" id="list-forbrain">
+              <button class="leaf-btn" type="button" data-act="leaf" data-id="forbrain" aria-expanded="false" aria-controls="detalj-forbrain">
+                <span class="leaf-n">06</span>
+                <span class="leaf-t">Forbrain</span>
+                <span class="leaf-s">Slušalice sa koštanom provodljivošću za govor, ritam i pažnju.</span>
+                <span class="leaf-more">Saznajte više <svg class="leaf-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </button>
+              
+                <div class="leaf-detail" id="detalj-forbrain" hidden>
+                  
+                    <img class="leaf-img" src="assets/img/forbrain-terapija.jpg" alt="Terapeutkinja i dete sa Forbrain slušalicama" loading="lazy">
+                  
+                  
+                  
+                    <div class="viz" aria-hidden="true"><div class="bars"><span style="animation-delay: 0.00s; animation-duration: 1.10s"></span><span style="animation-delay: 0.07s; animation-duration: 1.28s"></span><span style="animation-delay: 0.14s; animation-duration: 1.46s"></span><span style="animation-delay: 0.21s; animation-duration: 1.64s"></span><span style="animation-delay: 0.28s; animation-duration: 1.82s"></span><span style="animation-delay: 0.35s; animation-duration: 1.10s"></span><span style="animation-delay: 0.42s; animation-duration: 1.28s"></span><span style="animation-delay: 0.49s; animation-duration: 1.46s"></span><span style="animation-delay: 0.56s; animation-duration: 1.64s"></span><span style="animation-delay: 0.63s; animation-duration: 1.82s"></span><span style="animation-delay: 0.70s; animation-duration: 1.10s"></span><span style="animation-delay: 0.77s; animation-duration: 1.28s"></span><span style="animation-delay: 0.84s; animation-duration: 1.46s"></span><span style="animation-delay: 0.91s; animation-duration: 1.64s"></span><span style="animation-delay: 0.98s; animation-duration: 1.82s"></span><span style="animation-delay: 1.05s; animation-duration: 1.10s"></span><span style="animation-delay: 1.12s; animation-duration: 1.28s"></span><span style="animation-delay: 1.19s; animation-duration: 1.46s"></span><span style="animation-delay: 0.06s; animation-duration: 1.64s"></span><span style="animation-delay: 0.13s; animation-duration: 1.82s"></span><span style="animation-delay: 0.20s; animation-duration: 1.10s"></span><span style="animation-delay: 0.27s; animation-duration: 1.28s"></span><span style="animation-delay: 0.34s; animation-duration: 1.46s"></span><span style="animation-delay: 0.41s; animation-duration: 1.64s"></span></div><span class="viz-note">ukrasni prikaz</span></div>
+                  
+                  
+                  <div class="leaf-body">
+                    <p>Specijalizovane slušalice sa koštanom provodljivošću zvuka, koje koristimo kao terapijsko sredstvo.</p><p>Podržavaju verbalnu komunikaciju, artikulaciju, ritam, intonaciju, slušnu pažnju i koncentraciju. Uz podršku roditelja, deo vežbi može se raditi i kod kuće.</p>
+                  </div>
+                  
+                    <img class="panel-img2" src="assets/img/forbrain-slusalice.png" alt="Forbrain slušalice" loading="lazy">
+                  
+                  
+                  <a class="btn" href="#kontakt" style="align-self: flex-start">Zakažite procenu</a>
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="leafrow leafrow-r" data-leafrow="">
+            <svg class="stem" viewBox="0 0 64 30" aria-hidden="true"><path d="M0 26C20 26 40 18 64 4" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"></path></svg>
+            <div class="leaf tone-7" id="list-soundsory">
+              <button class="leaf-btn" type="button" data-act="leaf" data-id="soundsory" aria-expanded="false" aria-controls="detalj-soundsory">
+                <span class="leaf-n">07</span>
+                <span class="leaf-t">Soundsory</span>
+                <span class="leaf-s">Program slušanja i pokreta, za pažnju, pokret i fokus.</span>
+                <span class="leaf-more">Saznajte više <svg class="leaf-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </button>
+              
+                <div class="leaf-detail" id="detalj-soundsory" hidden>
+                  
+                    <img class="leaf-img" src="assets/img/soundsory-devojcica.jpg" alt="Devojčica sa Soundsory slušalicama, ruke podignute" loading="lazy">
+                  
+                  
+                  
+                  
+                    <div class="viz" aria-hidden="true"><div class="dots"><span></span><span style="animation-delay: .2s"></span><span style="animation-delay: .4s"></span><span style="animation-delay: .6s"></span><span style="animation-delay: .8s"></span></div><span class="viz-note">ukrasni prikaz</span></div>
+                  
+                  <div class="leaf-body">
+                    <p>Soundsory spaja slušanje kroz posebne slušalice i pokret.</p><p>Koristimo ga kao podršku pažnji, pokretu i fokusu.</p>
+                  </div>
+                  
+                    <img class="panel-img2" src="assets/img/soundsory-kutija.jpg" alt="Soundsory slušalice i kutija" loading="lazy">
+                  
+                  
+                  <a class="btn" href="#kontakt" style="align-self: flex-start">Zakažite procenu</a>
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="leafrow leafrow-l" data-leafrow="">
+            <svg class="stem" viewBox="0 0 64 30" aria-hidden="true"><path d="M0 26C20 26 40 18 64 4" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"></path></svg>
+            <div class="leaf tone-8" id="list-muzika">
+              <button class="leaf-btn" type="button" data-act="leaf" data-id="muzika" aria-expanded="false" aria-controls="detalj-muzika">
+                <span class="leaf-n">08</span>
+                <span class="leaf-t">Muzikoterapija</span>
+                <span class="leaf-s">Muzikoterapija je deo naših individualnih tretmana.</span>
+                <span class="leaf-more">Saznajte više <svg class="leaf-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </button>
+              
+                <div class="leaf-detail" id="detalj-muzika" hidden>
+                  
+                  
+                  
+                  
+                  <div class="leaf-body">
+                    <p>Muzikoterapiju nudimo kao jedan od individualnih tretmana. Više o tome kako izgleda rad saznaćete u razgovoru sa nama.</p>
+                  </div>
+                  
+                  
+                    <p><span class="ph">[PLACEHOLDER: kratak opis metode, potvrditi sa Svetlanom]</span></p>
+                  
+                  <a class="btn" href="#kontakt" style="align-self: flex-start">Zakažite procenu</a>
+                </div>
+              
+            </div>
+          </div>
+        
+          <div class="leafrow leafrow-r" data-leafrow="">
+            <svg class="stem" viewBox="0 0 64 30" aria-hidden="true"><path d="M0 26C20 26 40 18 64 4" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"></path></svg>
+            <div class="leaf tone-9" id="list-edukacije">
+              <button class="leaf-btn" type="button" data-act="leaf" data-id="edukacije" aria-expanded="false" aria-controls="detalj-edukacije">
+                <span class="leaf-n">09</span>
+                <span class="leaf-t">Edukacije za stručnjake</span>
+                <span class="leaf-s">Seminari i obuke za kolege, uz gostujuće stručnjake.</span>
+                <span class="leaf-more">Saznajte više <svg class="leaf-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </button>
+              
+                <div class="leaf-detail" id="detalj-edukacije" hidden>
+                  
+                    <img class="leaf-img" src="assets/img/edukacije.jpg" alt="Kolaž sa edukacija u Bamboo centru" loading="lazy">
+                  
+                  
+                  
+                  
+                  <div class="leaf-body">
+                    <p>Organizujemo stručne edukacije i seminare za kolege i u centar dovodimo spoljne stručnjake.</p><p>Tako je Brain Gym obuku za naše kolege u centru održala Koraljka Žepec.</p>
+                  </div>
+                  
+                  
+                    <p><span class="ph">[PLACEHOLDER: kalendar predstojećih edukacija]</span></p>
+                  
+                  <a class="btn" href="#kontakt" style="align-self: flex-start">Zakažite procenu</a>
+                </div>
+              
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- PRVI DOLAZAK -->
+  <section id="prvi-dolazak" class="sec visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="visit-grid">
+        <div class="sec-head" data-reveal="">
+          <span class="eyebrow">Prvi dolazak</span>
+          <h2 id="visit-h" class="h2">Tri čvora na stabljici. <em>Bez žurbe.</em></h2>
+          <p class="lead">Prvi susret je za upoznavanje. Vaše dete se snalazi u prostoru, a Vi govorite o onome što Vas brine. Ovako izgleda put od prvog poziva do plana.</p>
+        </div>
+        <div class="visit-photos" data-reveal="">
+          <div class="vp1 leafshape"><img src="assets/img/senzorna-balans.jpg" alt="Devojčica se igra na balans disku u sali" loading="lazy" style="object-position: 50% 40%"></div>
+          <div class="vp2 seedshape"><img src="assets/img/logoped-kartice.jpg" alt="Dečak tokom rada sa karticama i figuricama životinja" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="nodes" role="list">
+        <div class="nodes-stalk" data-stalk-x="" aria-hidden="true"></div>
+        <div class="node" data-node="" role="listitem">
+          <div class="node-ring" aria-hidden="true">1</div>
+          <h3>Poziv</h3>
+          <p>Pišete nam ili nas pozovete. Saslušamo Vas, postavimo nekoliko pitanja i dogovorimo termin.</p>
+        </div>
+        <div class="node" data-node="" role="listitem">
+          <div class="node-ring" aria-hidden="true">2</div>
+          <h3>Procena</h3>
+          <p>Timska procena logopeda i defektologa, bez žurbe, uz dete i roditelje. Dete radi kroz igru, a Vi ste tu.</p>
+        </div>
+        <div class="node" data-node="" role="listitem">
+          <div class="node-ring" aria-hidden="true">3</div>
+          <h3>Plan</h3>
+          <p>Dobijate pisano mišljenje stručnog tima, preporuke, plan terapije i smernice za rad kod kuće.</p>
+        </div>
+      </div>
+      <div class="visit-extra">
+        <div class="chip-card" data-reveal="">
+          <h4>Potrebna Vam je samo jedna oblast?</h4>
+          <p>Moguća je i pojedinačna procena: psihološka, logopedska ili defektološka.</p>
+        </div>
+        <div class="chip-card" data-reveal="">
+          <h4>Savetodavni rad sa roditeljima</h4>
+          <p>Nudimo ga i kao posebnu uslugu: prostor za Vaša pitanja i dogovor kako da podržite dete kod kuće.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUCNOST -->
+  <section id="strucnost" class="trust" aria-labelledby="trust-h">
+    <div class="wrap trust-grid">
+      <div class="trust-lead" data-reveal="">
+        <h2 id="trust-h" class="eyebrow">Stručnost u činjenicama</h2>
+        <p class="big-n" aria-label="Više od 12"><span class="big-num" data-count="12">12</span><span>+</span></p>
+        <p class="trust-p">godina prakse osnivačice, master defektologa. Centar je otvoren <b>2021.</b> u Kragujevcu i danas na jednom mestu nudi <b>9 usluga</b>, u <b>3 prostora</b> napravljena za pokret i čula.</p>
+        <p class="trust-media"><span>O nama</span> B92 · BizLife · Ritam grada · Glas Šumadije</p>
+      </div>
+      <div class="wall" data-reveal="">
+          <figure class="frame f-gold big" style="--r: -1.6deg"><div class="mat"><span class="fr-k">Priznanje</span><span class="fr-t">„1 od 100 najuspešnijih žena Srbije“</span><span class="fr-s">Pošte Srbije, 2023.</span></div></figure>
+          <figure class="frame f-wood" style="--r: 1.2deg"><div class="mat"><span class="fr-k">Obuka</span><span class="fr-t">Terapija senzorne integracije</span><span class="fr-s">Visoka škola socijalnog rada</span></div></figure>
+          <figure class="frame f-white" style="--r: -0.6deg"><div class="mat"><span class="fr-k">Studije</span><span class="fr-t">Doktorske studije</span><span class="fr-s">FASPER, edukacija dece oštećenog sluha</span></div></figure>
+          <figure class="frame f-wood" style="--r: 0.9deg"><div class="mat"><span class="fr-k">Obuka</span><span class="fr-t">Reedukacija psihomotorike</span><span class="fr-s">Model prof. dr Svetomira Bojanina, 2021.</span></div></figure>
+          <figure class="frame f-white" style="--r: -1.1deg"><div class="mat"><span class="fr-k">Ugovor</span><span class="fr-t">Fond SOVO</span><span class="fr-s">Socijalno osiguranje vojnih osiguranika, 2026.</span></div></figure>
+          <figure class="frame f-gold" style="--r: 1.4deg"><div class="mat"><span class="fr-k">Priznanje</span><span class="fr-t">„Inkluzivna igračka sa svrhom“</span><span class="fr-s">Za igru Luka i Mia, 2024.</span></div></figure>
+          <figure class="frame f-wood" style="--r: -0.8deg"><div class="mat"><span class="fr-k">Obuka</span><span class="fr-t">MNRI integracija refleksa</span><span class="fr-s">Po metodi Svetlane Masgutove, 2025.</span></div></figure>
+          <figure class="frame f-white" style="--r: 0.7deg"><div class="mat"><span class="fr-k">Obuka</span><span class="fr-t">Brain Gym facilitator</span><span class="fr-s">Kod Koraljke Žepec, 2026.</span></div></figure>
+          <figure class="frame f-wood" style="--r: -1.3deg"><div class="mat"><span class="fr-k">Obuka</span><span class="fr-t">Marte Meo International</span><span class="fr-s">2021.</span></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZASTO -->
+  <section id="zasto" class="sec band-sand" aria-labelledby="why-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Zašto baš Bamboo</span>
+        <h2 id="why-h" class="h2">Ne obećavamo čuda. Pokazujemo kako radimo.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-list">
+          <div class="why-item" data-reveal="">
+            <svg class="why-ico" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="18" r="7"></circle><circle cx="36" cy="20" r="6"></circle><path d="M6 42c2-9 8-13 12-13s10 4 12 13M30 40c1-6 4-9 7-9s7 3 9 9"></path></svg>
+            <div><h3>Stručni tim na jednom mestu</h3><p>Defektolozi, psiholog i vaspitač rade zajedno, a timsku procenu rade logoped i defektolog. Dete ne šaljemo od vrata do vrata.</p></div>
+          </div>
+          <div class="why-item" data-reveal="">
+            <svg class="why-ico" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M10 46V8M10 14h14M10 24h14M10 34h14M24 8v38"></path><path d="M38 8v14c0 6 6 6 6 12s-6 6-6 12"></path></svg>
+            <div><h3>Prostor napravljen za pokret i čula</h3><p>Sala za senzornu integraciju, sala za motoriku sa zidom za penjanje i trambolinom, i zamračena senzorna soba.</p></div>
+          </div>
+          <div class="why-item" data-reveal="">
+            <svg class="why-ico" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 28h8l4-10 6 20 6-26 6 22 4-6h10"></path></svg>
+            <div><h3>Savremene metode</h3><p>Neurofeedback, Forbrain i Soundsory slušalice, Brain Gym, reedukacija psihomotorike i rad sa primitivnim refleksima.</p></div>
+          </div>
+          <div class="why-item" data-reveal="">
+            <svg class="why-ico" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M26 44S8 33 8 20a9 9 0 0 1 18-2 9 9 0 0 1 18 2c0 13-18 24-18 24z"></path></svg>
+            <div><h3>Roditelj je partner</h3><p>Uz timsku procenu dobijate i smernice za rad kod kuće. Napredak deteta gradimo zajedno sa Vama.</p></div>
+          </div>
+          <div class="why-item" data-reveal="">
+            <svg class="why-ico" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="8" y="8" width="36" height="36" rx="6"></rect><circle cx="19" cy="19" r="2.5" fill="currentColor"></circle><circle cx="33" cy="33" r="2.5" fill="currentColor"></circle><circle cx="26" cy="26" r="2.5" fill="currentColor"></circle></svg>
+            <div><h3>Igra koju smo sami napravili</h3><p>Inkluzivna društvena igra „Luka i Mia uče delove tela“, da se vežba nastavi i kod kuće, kroz igru sa porodicom.</p></div>
+          </div>
+          <div class="why-item" data-reveal="">
+            <svg class="why-ico" viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 18l22-10 22 10-22 10z"></path><path d="M12 22v12c4 4 10 6 14 6s10-2 14-6V22M48 18v12"></path></svg>
+            <div><h3>Stalno učimo, i druge učimo</h3><p>Organizujemo edukacije za kolege i u centar dovodimo stručnjake, kako bi znanje stiglo do što više dece.</p></div>
+          </div>
+        </div>
+        <div class="mosaic" data-reveal="">
+          <figure class="m1"><img src="assets/img/sala-senzorna.jpg" alt="Sala za senzornu integraciju" loading="lazy"><figcaption>Sala za senzornu integraciju</figcaption></figure>
+          <figure class="m2"><img src="assets/img/sala-motorika.jpg" alt="Sala za motoriku sa zidom za penjanje i trambolinom" loading="lazy"><figcaption>Sala za motoriku</figcaption></figure>
+          <figure class="m3"><img src="assets/img/senzorna-soba-plava.jpg" alt="Zamračena senzorna soba sa svetlećim oblicima i loptama" loading="lazy"><figcaption>Senzorna soba</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIM -->
+  <section id="tim" class="sec" style="padding-top: 40px" aria-labelledby="tim-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Tim</span>
+        <h2 id="tim-h" class="h2">Ljudi koji primećuju male pomake.</h2>
+        <p class="lead">Naša vizija od početka: okupiti tim stručnjaka koji pomažu deci i roditeljima kroz izazove ranog razvoja.</p>
+      </div>
+      <div class="team">
+        <article class="person" data-reveal="">
+          <div class="portrait"><img src="assets/img/svetlana.jpg" alt="Svetlana Božović" loading="lazy"></div>
+          <span class="role">Osnivačica, master defektolog</span>
+          <h3>Svetlana Božović</h3>
+          <p>Doktorand na FASPER-u, terapeut senzorne integracije, reedukator psihomotorike. Više od 12 godina prakse.</p>
+          <details class="more"><summary><span class="plus">+</span> Više o Svetlani</summary>
+            <div><p>Rođena 1989. u Kragujevcu. Završila je Medicinsku školu, a zatim Fakultet za specijalnu edukaciju i rehabilitaciju, master 2014. godine.</p><p>Terapeut senzorne integracije (Visoka škola socijalnog rada), Marte Meo International (2021), reedukator psihomotorike po modelu prof. dr Svetomira Bojanina (2021), psihoterapeut pod supervizijom, O.L.I. Centar (2025). Treća godina doktorskih studija na FASPER-u, disertacija iz oblasti edukacije dece oštećenog sluha.</p></div>
+          </details>
+        </article>
+        <article class="person" data-reveal="">
+          <div class="portrait"><img src="assets/img/sara-v2.jpg" alt="Sara Milenković" loading="lazy"></div>
+          <span class="role">Diplomirani defektolog</span>
+          <h3>Sara Milenković</h3>
+          <p>U Bamboo centru od marta 2025. Topao i strpljiv pristup, rad doživljava kao poziv.</p>
+          <details class="more"><summary><span class="plus">+</span> Više o Sari</summary>
+            <div><p>Rođena 1999. u Kragujevcu. Diplomirala specijalnu edukaciju i rehabilitaciju na Medicinskom fakultetu u Novom Sadu, sa diplomskim radom o podršci deci sa ADHD u obrazovanju (ocena 10). Radila je u defektološko-logopedskom centru Fido u Novom Sadu.</p><p>Obuke: MNRI integracija refleksa, Brain Gym 26 pokreta (Koraljka Žepec), polivagalni intenziv i kurs o dečjim napadima besa.</p></div>
+          </details>
+        </article>
+        <article class="person" data-reveal="">
+          <div class="portrait"><img src="assets/img/miljana.jpg" alt="Prof. dr Miljana Pavićević" loading="lazy"></div>
+          <span class="role">Psiholog</span>
+          <h3>Prof. dr Miljana Pavićević</h3>
+          <p>Vanredni profesor na Odeljenju za psihologiju, Filozofski fakultet u Kosovskoj Mitrovici.</p>
+          <details class="more"><summary><span class="plus">+</span> Više o Miljani</summary>
+            <div><p>Rođena 1982. u Kosovskoj Mitrovici. Master na Filozofskom fakultetu u Beogradu, doktorat na Filozofskom fakultetu u Nišu 2020. Oblasti: psihologija ličnosti, inteligencija, komunikacija.</p><p>Psihodijagnostika psihomotornog razvoja dece, procena intelektualnih sposobnosti i ličnosti, procena hiperaktivnosti, profesionalna orijentacija i psihološko savetovanje dece i adolescenata. TA praktičar, asertivni trener, voditelj psiholoških radionica.</p></div>
+          </details>
+        </article>
+        <article class="person" data-reveal="">
+          <div class="portrait"><img src="assets/img/ana.jpg" alt="Ana Ivković" loading="lazy"></div>
+          <span class="role">Specijalista strukovni vaspitač</span>
+          <h3>Ana Ivković</h3>
+          <p>Više od devet godina rada sa predškolcima, kroz dramu, pesmu, muziku i tradicionalne igre.</p>
+          <details class="more"><summary><span class="plus">+</span> Više o Ani</summary>
+            <div><p>Rođena 1990. Tri godine radila je u razrednoj nastavi u osnovnoj školi, a zatim više od devet godina kao vaspitač u predškolskoj ustanovi, sa posebnom pažnjom prema deci iz osetljivih grupa.</p><p>Autorka pesama, priča i dramskih tekstova za decu. Učestvuje u humanitarnim i kulturnim događajima.</p></div>
+          </details>
+        </article>
+      </div>
+      <div class="group" data-reveal="">
+        <img src="assets/img/tim-grupna.jpg" alt="Grupna fotografija tima Bamboo centra" loading="lazy">
+        <p>Na fotografiji je deo našeg tima, među njima Svetlana Božović, Sara Milenković, prof. dr Miljana Pavićević i Ana Ivković.<br><span class="ph" style="margin-top: 10px">[PLACEHOLDER: imena i uloge ostalih članova tima, uključujući logopeda]</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OSNIVAC -->
+  <section id="svetlana" class="sec founder" style="padding: 88px 0" aria-labelledby="founder-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Priča osnivačice</span>
+        <h2 id="founder-h" class="h2">Svetlana je centar otvorila 31. maja 2021.</h2>
+      </div>
+      <div class="founder-grid">
+        <div class="f-text" data-reveal="">
+          <p>Posle više od 12 godina prakse, Svetlana Božović je u Kragujevcu otvorila Bamboo centar sa jasnom idejom: rana dijagnostika daje smernice za stimulaciju prilagođenu svakom detetu, a dete i roditelj ne treba da prolaze kroz to sami.</p>
+          <p>Organizovala je prvu saradnju Srbije i Kine u oblasti specijalne edukacije i rehabilitacije i učestvovala na onlajn seminaru u Šangaju kao jedini predstavnik Srbije.</p>
+          <div class="f-photos">
+            <figure><img src="assets/img/nagrada-komora.jpg" alt="Svetlana Božović u Privrednoj komori Srbije" loading="lazy"><figcaption>Privredna komora Srbije, jun 2023.</figcaption></figure>
+            <figure><img src="assets/img/nagrada-urucenje.jpg" alt="Svetlana Božović na dodeli priznanja" loading="lazy"><figcaption>Priznanje „1 od 100 najuspešnijih žena Srbije“</figcaption></figure>
+          </div>
+        </div>
+        <ol class="timeline" data-reveal="">
+          <li><b>2021.</b>Otvara Bamboo centar.</li>
+          <li><b>2022.</b>U aprilu centar počinje sa neurofeedback tretmanima, kao prvi u Kragujevcu u to vreme.</li>
+          <li><b>2023.</b>Priznanje „1 od 100 najuspešnijih žena Srbije“, konkurs Pošte Srbije.</li>
+          <li><b>2024.</b>Igra „Luka i Mia“, sa koleginicom Tijanom Milovanović.</li>
+          <li><b>2025.</b>Saradnja sa udruženjem „Sidro“, MNRI integracija refleksa, psihoterapeut pod supervizijom (O.L.I. Centar).</li>
+          <li><b>2026.</b>Ugovor sa SOVO fondom i obuka za Brain Gym facilitatora kod Koraljke Žepec.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- LUKA I MIA -->
+  <section id="luka-i-mia" class="sec band-peach" aria-labelledby="lm-h">
+    <div class="wrap lm">
+      <div class="lm-photos" data-reveal="">
+        <div class="lm1"><img src="assets/img/igra-luka-mia.jpg" alt="Društvena igra Luka i Mia uče delove tela: tabla, kartice i kutija sa dve pande" loading="lazy"></div>
+        <div class="lm2"><img src="assets/img/svetlana-igra.jpg" alt="Svetlana Božović drži kutiju igre Luka i Mia" loading="lazy"></div>
+      </div>
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Luka i Mia</span>
+        <h2 id="lm-h" class="h2">Dve pande koje uče sa decom i kod kuće.</h2>
+        <p class="lead">Napravili smo inkluzivnu društvenu igru da deca mogu da vežbaju i van centra: sa porodicom, kroz igru, bez osećaja da je to zadatak.</p>
+        <div class="lm-facts"><span>Uzrast 4+</span><span>Tabla, 4 pijuna, 2 kockice</span><span>145 kartica</span><span>5 zadataka po delu tela</span></div>
+        <div class="award">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#B5603A" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" style="flex: none"><circle cx="20" cy="15" r="9"></circle><path d="M14 23l-3 13 9-5 9 5-3-13"></path></svg>
+          <p>Priznanje „Inkluzivna igračka sa svrhom“, „Žute pantalone“, krajem 2024. O igri su pisali i govorili Ritam grada, B92, BizLife i Glas Šumadije.</p>
+        </div>
+        <div class="award">
+          <img src="assets/img/sidro-mural.jpg" alt="Radionica sa udruženjem Sidro u dvorištu centra" loading="lazy" style="width: 96px; height: 72px; object-fit: cover; border-radius: 14px; flex: none">
+          <p>Od 2025. sa Udruženjem roditelja dece sa poteškoćama u razvoju „Sidro“ pravimo inkluzivne radionice, u dvorištu ispred murala sa pandom.</p>
+        </div>
+        <p><span class="ph">[PLACEHOLDER: kako se igra može nabaviti]</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CENE -->
+  <section id="cene" class="sec" style="padding-top: 40px" aria-labelledby="cene-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Cene</span>
+        <h2 id="cene-h" class="h2">Cene i fondovi</h2>
+        <p class="lead">Cene Vam kažemo telefonom, pre nego što bilo šta zakažete. Pozovite nas na <a class="tlink" href="tel:+381666616699">066 661 6699</a>.</p>
+        <p class="lead">Imamo ugovor sa Fondom za socijalno osiguranje vojnih osiguranika (SOVO).</p>
+      </div>
+      <!-- Tabela cena: uključuje se u Tweaks (Prikaži cenovnik) kad Svetlana pošalje cene. -->
+      
+      <div class="prices" hidden>
+        <div class="prow"><div><h3>Timska procena</h3><p>Logoped i defektolog, pisano mišljenje tima, preporuke i plan rada</p></div><span class="ph">[PLACEHOLDER: cena]</span></div>
+        <div class="prow"><div><h3>Pojedinačna procena</h3><p>Psihološka, logopedska ili defektološka</p></div><span class="ph">[PLACEHOLDER: cena]</span></div>
+        <div class="prow"><div><h3>Individualni tretman</h3><p>Logopedski, defektološki, senzorna integracija, muzikoterapija</p></div><span class="ph">[PLACEHOLDER: cena po terminu]</span></div>
+        <div class="prow"><div><h3>Neurofeedback ciklus</h3><p>20 tretmana, najmanje dva puta nedeljno tokom 10 nedelja</p></div><span class="ph">[PLACEHOLDER: cena ciklusa]</span></div>
+        <div class="prow"><div><h3>Forbrain i Soundsory</h3><p>Ako se naplaćuju posebno</p></div><span class="ph">[PLACEHOLDER: cena]</span></div>
+        <div class="prow"><div><h3>Savetodavni rad sa roditeljima</h3><p>Razgovor sa stručnjakom</p></div><span class="ph">[PLACEHOLDER: cena]</span></div>
+        <div class="prow"><div><h3>Edukacije za stručnjake</h3><p>Prema programu seminara</p></div><span class="ph">[PLACEHOLDER: cena]</span></div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- PRICE RODITELJA -->
+  <section id="price" class="sec" aria-labelledby="price-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Priče roditelja</span>
+        <h2 id="price-h" class="h2">Pisma koja čuvamo.</h2>
+        <p class="lead">Roditelji su nam ove reči poslali sami. Prenosimo ih uz minimalne ispravke pravopisa.</p>
+      </div>
+      <div class="letters">
+        <figure class="letter" data-reveal=""><span class="q" aria-hidden="true">“</span>
+          <blockquote>Sa Svetlanom smo došli u kontakt putem preporuke koju smo dobili od njene koleginice, vrsnog logopeda i stručnjaka Nede Radić. I zaista, nismo se pokajali nijednog trenutka što smo Teodora poverili Svetlani. Naravno, sama situacija je jako specifična, osećanja su pomešana. Ima tu tuge, radosti, vere, nade, sumnje, razočarenja... ali ono što smo naučili je da je najvažnija upornost i posvećenost, kako nas roditelja tako i terapeuta, a verujte nam, kod Svetlane toga ne manjka. Dajemo sve preporuke koje možemo dati čista srca i savesti, jer Bamboo centar to zaslužuje.</blockquote>
+          <figcaption>Valentina i Ognjen Obradović, roditelji Teodora</figcaption></figure>
+        <figure class="letter" data-reveal=""><span class="q" aria-hidden="true">“</span>
+          <blockquote>BAMBOO CENTAR je ustanova, ili bolje rečeno mesto, koje kod nas roditelja, a pre svega kod našeg deteta Vase, budi osećaj toplog i vedrog raspoloženja, prihvatanja, osećaj kao da je kod svoje kuće. Zajednička saradnja je naš spas.</blockquote>
+          <figcaption>Jasmina Blagojević Knežević, mama Vasilija</figcaption></figure>
+        <figure class="letter" data-reveal=""><span class="q" aria-hidden="true">“</span>
+          <blockquote>Draga Ceco, moram da ti priznam da si za ovo kratko vreme, ti i tvoj tim, postali prijatelji cele naše porodice. Želela bih da vam se zahvalim na uloženom trudu, radu i vremenu koje ste izdvojili za našu decu, a i drugu. Zahvaljujući tebi i tvom timu naša deca su dosta napredovala, a mi kao roditelji prezadovoljni. Zahvaljujući vašem radu i saradnji sa roditeljem pojavile su se prve reči, rečenice, čak i pesmice i još mnogo toga... Posebno hvala što imate tako divnu saradnju sa nama roditeljima. Želim da ti se zahvalim za svaki napredak kojeg je do sada bilo, a sigurno će ih biti još, a sve to zahvaljujući vašem radu. Mnogo smo srećni što smo vas upoznali i što ste ti i tvoj tim postali deo naše porodice. HVALA VAM ZA SVE.</blockquote>
+          <figcaption>Sofija Stefanović, o deci Sofiji i Vanji</figcaption></figure>
+        <figure class="letter" data-reveal=""><span class="q" aria-hidden="true">“</span>
+          <blockquote>Osoba koja je požrtvovana prema deci, vredna, marljiva, stručna. Malo je reči kojima bismo mogli sve to opisati. Trudi se da sasluša svakog i usmeri na pravi način. Daje sve od sebe da pomogne dečici i u tome uspeva. Sve pohvale, najbolji ste.</blockquote>
+          <figcaption>Danijela Tomašević, mama</figcaption></figure>
+        <figure class="letter" data-reveal=""><span class="q" aria-hidden="true">“</span>
+          <blockquote>Sve najviše preporuke za Bamboo centar. Ljubazno i stručno osoblje, svako dete posmatraju kao posebnu malu ličnost sa svojim željama, potrebama i osećanjima i prema tome prave jedinstven program po kojem će da vežbaju sa decom, da bi ona što bolje napredovala. Uvek smo dočekani sa osmehom i ispraćeni sa pravim savetom za dalji rad. Otvoreni su za svaki dogovor i spremni da vam uvek odgovore na svako pitanje ako imate neki problem. Toplo ih preporučujemo svima kojima je potrebna njihova pomoć, mi smo prezadovoljni.</blockquote>
+          <figcaption>Tijana Prodanović, Vojina mama</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="pitanja" class="sec" style="padding-top: 40px" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Pitanja roditelja</span>
+        <h2 id="faq-h" class="h2">Šta nas najčešće pitate.</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Kako izgleda prvi dolazak?<span class="tg" aria-hidden="true">+</span></summary>
+          <div class="ans"><p>Prvo se čujemo telefonom ili porukom i dogovorimo termin. Na prvom dolasku obično radimo timsku procenu: logoped i defektolog upoznaju dete kroz igru, uz Vas. Posle procene dobijate pisano mišljenje, preporuke i plan rada.</p></div></details>
+        <details><summary>Šta je timska procena?<span class="tg" aria-hidden="true">+</span></summary>
+          <div class="ans"><p>To je zajednička procena logopeda i defektologa. Posle nje dobijate pisano mišljenje stručnog tima, preporuke i plan daljeg rada, kao i smernice šta možete raditi kod kuće.</p></div></details>
+        <details><summary>Šta je neurofeedback i koliko tretmana treba?<span class="tg" aria-hidden="true">+</span></summary>
+          <div class="ans"><p>Neurofeedback je metoda zasnovana na praćenju električne aktivnosti mozga (EEG) i davanju povratne informacije, kako bi mozak učio korisnije obrasce. Postupak je jednostavan, bezbolan i neinvazivan: dete oko 30 minuta sedi ispred ekrana.</p><p>Jedan ciklus čini 20 tretmana, najmanje dva puta nedeljno tokom 10 nedelja. Između ciklusa pravi se pauza.</p></div></details>
+        <details><summary>Čemu služe Forbrain i Soundsory slušalice?<span class="tg" aria-hidden="true">+</span></summary>
+          <div class="ans"><p>Forbrain su slušalice sa koštanom provodljivošću zvuka. Koristimo ih kao podršku govoru, artikulaciji, ritmu, intonaciji, slušnoj pažnji i koncentraciji, a deo vežbi može se raditi i kod kuće uz roditelja.</p><p>Soundsory je program slušanja i pokreta uz slušalice, kao podrška pažnji, pokretu i fokusu.</p></div></details>
+        <details><summary>Šta je senzorna integracija i kako izgleda soba za nju?<span class="tg" aria-hidden="true">+</span></summary>
+          <div class="ans"><p>Senzorna integracija pomaže deci kojoj su svakodnevni čulni utisci previše ili ih teško organizuju. Imamo posebnu senzornu sobu i salu za motoriku i senzornu integraciju sa švedskim lestvama, žutom svilom, bazenom sa lopticama, zidom za penjanje i trambolinom.</p></div></details>
+        <details><summary>Radite li i sa decom tipičnog razvoja koja imaju teškoće sa pažnjom, čitanjem ili pisanjem?<span class="tg" aria-hidden="true">+</span></summary>
+          <div class="ans"><p>Da. Radimo sa decom sa različitim razvojnim poremećajima, ali i sa decom tipičnog razvoja koja imaju teškoće sa pažnjom, koncentracijom, čitanjem ili pisanjem.</p></div></details>
+        <details><summary>Da li imate ugovor sa nekim fondom?<span class="tg" aria-hidden="true">+</span></summary>
+          <div class="ans"><p>Od početka 2026. imamo ugovor sa Fondom za socijalno osiguranje vojnih osiguranika (SOVO). Šta tačno ugovor obuhvata, rado ćemo Vam objasniti telefonom.</p></div></details>
+        <details><summary>Kako da zakažem?<span class="tg" aria-hidden="true">+</span></summary>
+          <div class="ans"><p>Pozovite nas na <a class="tlink" href="tel:+381666616699">066 661 6699</a>, pišite na <a class="tlink" href="mailto:bamboobcd@gmail.com">bamboobcd@gmail.com</a> ili popunite formular ispod.</p></div></details>
+        <details><summary>Koje je radno vreme i sa kojim uzrastom radite?<span class="tg" aria-hidden="true">+</span></summary>
+          <div class="ans"><p><span class="ph">[PLACEHOLDER: radno vreme]</span></p><p><span class="ph">[PLACEHOLDER: uzrast dece]</span></p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="sec contact" aria-labelledby="kontakt-h">
+    <div class="wrap">
+      <div class="sec-head" data-reveal="">
+        <span class="eyebrow">Kontakt i zakazivanje</span>
+        <h2 id="kontakt-h" class="h2">I za najduže putovanje <em>potreban je prvi korak.</em></h2>
+      </div>
+      <div class="c-grid">
+        <div class="c-info" data-reveal="">
+          <div class="c-row"><span>Adresa</span><p>Mokranjčeva 58, 34000 Kragujevac</p></div>
+          <div class="c-row"><span>Telefon</span><a href="tel:+381666616699">+381 66 66 16 699</a></div>
+          <div class="c-row"><span>Email</span><a href="mailto:bamboobcd@gmail.com">bamboobcd@gmail.com</a></div>
+          <div class="c-row"><span>Radno vreme</span><p><span class="ph">[PLACEHOLDER: radno vreme]</span></p></div>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Mokranj%C4%8Deva%2058%2C%20Kragujevac" target="_blank" rel="noopener" aria-label="Otvorite lokaciju Mokranjčeva 58, Kragujevac u Google mapama">
+            <svg viewBox="0 0 500 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <path d="M-10 60C120 70 220 40 520 80M-10 160c140-20 300 10 520-30M140-10c10 80-20 160 10 240M330-10c-20 90 20 150-10 240" stroke="#FBF8F1" stroke-width="14" fill="none" stroke-linecap="round"></path>
+              <path d="M-10 110c160 0 300-30 520 0M240-10c0 80 10 160-10 240" stroke="#F5EFE3" stroke-width="6" fill="none"></path>
+              <circle cx="410" cy="190" r="60" fill="#D6E2BA"></circle>
+              <g transform="translate(236 78)"><path d="M14 0C6 0 0 6 0 14c0 11 14 26 14 26s14-15 14-26C28 6 22 0 14 0z" fill="#B5603A"></path><circle cx="14" cy="14" r="5" fill="#FBF8F1"></circle></g>
+            </svg>
+            <span class="map-label">Mokranjčeva 58 · Otvorite mapu</span>
+          </a>
+          <div class="socials">
+            <a href="https://www.instagram.com/bamboo_bcd/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/people/Bamboo-Center-of-Development/100077275067217/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.youtube.com/@bamboocenterofdevelopment716" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://bamboocenter-kragujevac.blogspot.com/" target="_blank" rel="noopener">Blog</a>
+          </div>
+        </div>
+        <!-- Formular: zameniti YOUR_FORM_ID u action atributu ID-jem forme sa formspree.io (vidi README). -->
+        <form class="form" id="upit-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-reveal="" aria-labelledby="kontakt-h">
+          <div class="field"><label for="f-ime">Ime i prezime</label><input id="f-ime" name="ime" type="text" autocomplete="name" required=""></div>
+          <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required=""></div>
+          <div class="field"><label for="f-uzrast">Uzrast deteta</label><input id="f-uzrast" name="uzrast" type="text" placeholder="npr. 4 godine"></div>
+          <div class="field full"><label for="f-poruka">Kratka poruka</label><textarea id="f-poruka" name="poruka" placeholder="Šta Vas brine ili šta želite da pitate?"></textarea></div>
+          <label class="consent"><input type="checkbox" name="saglasnost" required=""><span>Saglasan/saglasna sam da Bamboo centar koristi ove podatke samo da bi mi odgovorio na upit.</span></label>
+          
+            <p class="sent" role="status" id="upit-poruka" hidden>Hvala Vam. Upit je primljen, javićemo Vam se.</p>
+          
+          <div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
+            <button class="btn" type="submit">Pošaljite upit</button>
+            <span style="font-size: 15px; color: #4A6043">Možete nas i pozvati: <a class="tlink" href="tel:+381666616699">066 661 6699</a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <img src="assets/img/logo.png" alt="Bamboo Center of Development" width="84" height="84" style="border-radius: 50%">
+          <p class="serif" style="font-size: 22px; line-height: 1.3; max-width: 340px">Centar za rani razvoj i podršku deci i roditeljima u Kragujevcu.</p>
+        </div>
+        <div><h4>Kontakt</h4><ul><li>Mokranjčeva 58, Kragujevac</li><li><a href="tel:+381666616699">066 661 6699</a></li><li><a href="mailto:bamboobcd@gmail.com">bamboobcd@gmail.com</a></li></ul></div>
+        <div><h4>Strana</h4><ul><li><a href="#usluge">Usluge</a></li><li><a href="#prvi-dolazak">Prvi dolazak</a></li><li><a href="#tim">Tim</a></li><li><a href="#cene">Cene</a></li><li><a href="#pitanja">Pitanja</a></li></ul></div>
+        <div><h4>Pratite nas</h4><ul><li><a href="https://www.instagram.com/bamboo_bcd/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/people/Bamboo-Center-of-Development/100077275067217/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.youtube.com/@bamboocenterofdevelopment716" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://bamboocenter-kragujevac.blogspot.com/" target="_blank" rel="noopener">Blog</a></li></ul></div>
+      </div>
+      <div class="partners">
+        <span style="font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #4A6043">Partneri</span>
+        <img src="assets/img/partner-logoland.jpg" alt="Logoland, logopedski kabinet" loading="lazy" style="background: #fff; padding: 4px">
+        <img src="assets/img/partner-kvarklab.jpg" alt="KvarkLab, medicinsko biohemijska laboratorija" loading="lazy">
+      </div>
+      <div class="credit"><span>© 2026 Bamboo Center of Development. Sva prava zadržana.</span><span>Dizajn i izrada: <a class="credit-name" href="mailto:vilcekwebdesign@gmail.com" title="vilcekwebdesign@gmail.com">Nenad Vilček</a></span></div>
+    </div>
+  </footer>
+
+  <nav class="mbar" aria-label="Brzo zakazivanje">
+    <a class="btn btn-ghost" href="tel:+381666616699">Pozovite</a>
+    <a class="btn" href="#kontakt">Zakažite procenu</a>
+  </nav>
+
+</div>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
