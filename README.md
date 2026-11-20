@@ -40,10 +40,11 @@ assets/img/             fotografije (isečene, bez utisnutih logoa i adresa)
    - za `bamboocenter.rs`: četiri A zapisa ka `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - za `www`: CNAME zapis ka `KORISNIK.github.io`
 3. Kad DNS proradi, uključite **Enforce HTTPS**.
+4. U `index.html` zamenite `https://vilceknenad1.github.io/bamboocenter/` novim domenom u `og:url` i `og:image` (slika za pregled linka na Viberu, WhatsApp-u i mrežama).
 
 ## Formular za upit (obavezno pre objave)
 
-Formular trenutno samo prikazuje poruku zahvalnosti i ne šalje ništa.
+Dok formular nije povezan, posle slanja se prikazuje poruka da upit nije poslat, uz telefon i email centra.
 
 1. Napravite besplatan nalog na formspree.io i novu formu, sa emailom centra (bamboobcd@gmail.com) kao primaocem.
 2. Kopirajte ID forme (npr. `xyzabcd`).

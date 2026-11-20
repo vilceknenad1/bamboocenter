@@ -101,7 +101,10 @@
       msg.textContent = ok ? 'Hvala Vam. Upit je primljen, javićemo Vam se.' : 'Slanje trenutno nije uspelo. Pozovite nas na 066 661 6699 ili pišite na bamboobcd@gmail.com.';
       if (ok) form.reset();
     };
-    if (action.indexOf('YOUR_FORM_ID') !== -1) { done(true); return; } // formular još nije povezan (vidi README)
+    if (action.indexOf('YOUR_FORM_ID') !== -1) { // formular još nije povezan (vidi README)
+      if (msg) { msg.hidden = false; msg.textContent = 'Formular još nije povezan, pa upit nije poslat. Pozovite nas na 066 661 6699 ili pišite na bamboobcd@gmail.com.'; }
+      return;
+    }
     fetch(action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
       .then(function (res) { done(res.ok); }).catch(function () { done(false); });
   });
