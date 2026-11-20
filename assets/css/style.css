@@ -71,7 +71,7 @@ a{color:#2E4529}a:hover{color:#6F8F3F}
 @media (max-width:1340px){.hero-meta{flex-direction:column;gap:8px}.hero-meta li{padding:0 0 0 22px;border-left:0;position:relative}.hero-meta li::before{content:"";position:absolute;left:0;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:2px 8px 2px 8px;background:#8DAA57}}
 @keyframes bcdUp{to{opacity:1;transform:none}}
 .garden{position:relative;height:640px}
-.g-band{position:absolute;left:4%;right:-180px;top:40px;bottom:24px;overflow:hidden;border-radius:320px 0 0 320px / 50% 0 0 50%;z-index:0}
+.g-band{position:absolute;left:4%;right:calc(-1 * max(180px, (100vw - min(1180px, 100vw - 220px)) / 2));top:40px;bottom:24px;overflow:hidden;border-radius:320px 0 0 320px / 50% 0 0 50%;z-index:0}
 .g-band img{width:100%;height:100%;object-fit:cover;object-position:28% 50%}
 .g-stalks{position:absolute;left:30%;bottom:0;width:240px;height:640px;z-index:1;transform-origin:bottom center}
 .g-stalks svg{width:100%;height:100%;overflow:visible}
