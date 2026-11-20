@@ -84,6 +84,11 @@
     if (b) { b.addEventListener('click', function () { setCx(i); }); b.addEventListener('focus', function () { setCx(i); }); }
   });
 
+  /* ---------- duga pisma ---------- */
+  root.querySelectorAll('[data-act="letter"]').forEach(function (b) {
+    b.addEventListener('click', function () { var f = b.closest('.letter'); if (f) f.classList.toggle('is-full'); });
+  });
+
   /* ---------- formular (Formspree) ---------- */
   var form = document.getElementById('upit-form');
   var msg = document.getElementById('upit-poruka');
@@ -113,6 +118,25 @@
     });
     (function loop() { x += (tx - x) * 0.25; y += (ty - y) * 0.25; c.style.transform = 'translate(' + x + 'px,' + y + 'px)'; requestAnimationFrame(loop); })();
   }
+
+  /* ---------- donja traka se sklanja kod kontakta ---------- */
+  var kontaktSec = document.getElementById('kontakt');
+  if (kontaktSec && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) { root.classList.toggle('at-contact', en[0].isIntersecting); }, { threshold: 0.15 }).observe(kontaktSec);
+  }
+
+  /* ---------- tačkice za vodoravne nizove na telefonu ---------- */
+  root.querySelectorAll('[data-dots-for]').forEach(function (d) {
+    var sc = document.getElementById(d.getAttribute('data-dots-for'));
+    if (!sc) return;
+    var dots = d.querySelectorAll('i');
+    var upd = function () {
+      var base = sc.getBoundingClientRect().left, idx = 0, best = 1e9;
+      Array.prototype.forEach.call(sc.children, function (it, k) { var dist = Math.abs(it.getBoundingClientRect().left - base - 20); if (dist < best) { best = dist; idx = k; } });
+      dots.forEach(function (x, k) { x.classList.toggle('on', k === idx); });
+    };
+    sc.addEventListener('scroll', upd, { passive: true });
+  });
 
   /* ---------- pokret ---------- */
   if (reduced) { root.classList.add('is-static'); root.style.setProperty('--p', '1'); return; }
